@@ -24,4 +24,11 @@ angular.module('relationalDataApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
     });
+
+    $scope.player = [
+      {
+        firstName: "Terrence",
+        lastName: "Watson"
+      }
+    ];
   });
