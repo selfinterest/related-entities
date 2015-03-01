@@ -7,12 +7,16 @@
       .row.full-height-lg
         .col-lg-12.full-height-lg
           .column
-            .player-widget(draggable="true")
-              .player-img
-    .col-lg-10.canvas
+            .player-widget(draggable="true", ng-repeat="player in players", id="player-{{$index}}")
+              .player-info
+                p.small {{player.firstName}}
+    .col-lg-10.canvas-container
       .row
         .col-lg-12
           h3.section-header.centered Canvas
+      .row.full-height
+        .col-lg-12.full-height
+          .canvas(droppable="true")
     .col-lg-1.full-height-lg
       .row
         .col-lg-12
